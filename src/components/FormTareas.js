@@ -1,4 +1,5 @@
 import React from "react";
+import ListaTareas from "./ListaTareas";
 
 const FormTareas = () => {
   return (
@@ -9,6 +10,9 @@ const FormTareas = () => {
           <button type= "submit" className= "btn btn-outline-light">Agregar</button>
         </div>
       </form>
+      <section className= "container">
+        <ListaTareas/>
+      </section>
     </>
   );
 };
