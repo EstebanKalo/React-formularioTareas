@@ -2,7 +2,7 @@ import React from 'react';
 
 const ItemTarea = () => {
     return (
-        <li class="list-group-item">An item</li>
+        <li className="list-group-item">An item</li>
     );
 };
 
