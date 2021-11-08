@@ -1,8 +1,8 @@
 import React from 'react';
 
-const ItemTarea = () => {
+const ItemTarea = (props) => {
     return (
-        <li className="list-group-item">An item</li>
+        <li className="list-group-item">{props.dato}</li>
     );
 };
 
