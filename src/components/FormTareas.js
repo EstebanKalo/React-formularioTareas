@@ -1,11 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ListaTareas from "./ListaTareas";
 
 const FormTareas = () => {
+  let tareasLocalStorage = JSON.parse(localStorage.getItem("listaTareas"))  || [];
   // aqui va la logica
   // crear los state necesarios
   const [tareaIndividual, setTareaIndividual] = useState("");
-  const [tareas, setTareas] = useState([]);
+  const [tareas, setTareas] = useState(tareasLocalStorage);
+
+  //aqui uso el ciclo de vida de un componente
+  useEffect(()=>{
+    // esto funciona en montaje y actualizacion
+    // console.log("Ejecutando el ciclo de vida de un componente");
+    localStorage.setItem("listaTareas", JSON.stringify(tareas));
+  }, [tareas])
+
+
+
 
   // const guardarTarea = (e) => {
   //   // console.log(e.target.value)
